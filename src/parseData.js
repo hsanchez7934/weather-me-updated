@@ -9,4 +9,4 @@ export default function parseData(weatherData) {
     }
     return acc;
   }, {});
-};
+}

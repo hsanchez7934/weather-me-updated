@@ -8,8 +8,11 @@ $('#submit-button').on('click', fetchWeatherDataOnClick);
 function fetchWeatherDataOnClick() {
   const parent = document.getElementById('bottom-main');
   const child = document.getElementById('list-wrapper');
-  if (child) {
+  const cityTitleParent = document.getElementById('city-name-wrapper');
+  const cityTitleNode = document.getElementById('city-title');
+  if (child || cityTitleNode) {
     parent.removeChild(child);
+    cityTitleParent.removeChild(cityTitleNode);
   }
   const userInput = document.getElementById('user-input').value;
   fetchData(userInput);
