@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
-require('dotenv').config()
+require('dotenv').config();
 
 const requireHTTPS = (request, response, next) => {
   if (request.header('x-forwarded-proto') != 'https') {
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/dist'));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.locals.title = 'Weather Me';
 
