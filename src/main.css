@@ -41,7 +41,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 30%;
+  height: 40%;
 }
 
 h3 {
@@ -86,12 +86,10 @@ button:hover {
 }
 
 #bottom-main {
-  background-color: red;
-
+  height: 60%;
 }
 
 #list-wrapper {
-  background-color: green;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -99,4 +97,17 @@ button:hover {
 
 article {
   border: 1px solid black;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+}
+
+#city-title {
+  font-size: 20px;
 }
