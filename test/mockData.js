@@ -1294,4 +1294,4 @@ const weatherData = {
   }
 };
 
-export default weatherData;
+module.exports = weatherData;

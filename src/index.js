@@ -1,7 +1,7 @@
 import key from './key.js';
 import './main.css';
 import axios from 'axios';
-import kelvinToFahrenheit from 'kelvin-to-fahrenheit';
+import parseData from './parseData.js';
 
 $('#submit-button').on('click', fetchWeatherDataOnClick);
 
@@ -30,17 +30,6 @@ async function fetchData(query) {
     const weatherData = parseData(response.data.list);
     displayData(weatherData, city);
   }
-}
-
-function parseData(weatherData) {
-  return weatherData.reduce((acc, item) => {
-    if (!acc[item.dt_txt.slice(0, 10)]) {
-      acc[item.dt_txt.slice(0, 10)] = {};
-    } else {
-      acc[item.dt_txt.slice(0, 10)][item.dt_txt.slice(11, 19)] = kelvinToFahrenheit(item.main.temp) + ' F';
-    }
-    return acc;
-  }, {});
 }
 
 function displayCityName(city) {
