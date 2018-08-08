@@ -1,8 +1,6 @@
 import key from './key.js';
 import './main.css';
 import axios from 'axios';
-import mockData from '../mockData';
-import moment from 'moment';
 import kelvinToFahrenheit from 'kelvin-to-fahrenheit';
 
 $('#submit-button').on('click', fetchWeatherDataOnClick);
@@ -57,9 +55,11 @@ function displayData(weatherData, city) {
   const section = document.getElementById('bottom-main');
   const fragment = document.createDocumentFragment();
   const listWrapper = document.createElement('div');
-  listWrapper.setAttribute('id', 'list-wrapper');
   const cityName = displayCityName(city);
+
+  listWrapper.setAttribute('id', 'list-wrapper');
   cityNameWrapper.appendChild(cityName);
+
   for (let day in weatherData) {
     let date = weatherData[day];
     let dateCard = document.createElement('article');
