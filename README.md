@@ -2,7 +2,7 @@
 
 Link to live application: https://weather-me-hsanchez.herokuapp.com/
 
-Updates to this application are lcoated on branch hs-updates
+Updates to this application are located on branch hs-updates.
 
 
 # Application Description
