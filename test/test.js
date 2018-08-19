@@ -1,8 +1,8 @@
 const jsdom = require('mocha-jsdom');
-import {expect} from 'chai';
+import { expect } from 'chai';
 import mockData from './mockData.js';
 import setup from './setup';
-import parseData from '../src/parseData';
+import { parseData } from '../src/cleanerFunctions';
 const server = require('../server.js');
 const chai = require('chai');
 const should = chai.should();
